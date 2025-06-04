@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMK Bina Informatika</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .poster {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 150, 255, 0.2);
+    }
+
+    .logo {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+
+    .judul h2 {
+      font-size: 1.6em;
+      color: #005b8f;
+    }
+
+    .judul h3 {
+      font-size: 1.2em;
+      color: #0077b6;
+      margin-bottom: 25px;
+    }
+
+    .main-photo {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 15px 0;
+      border: 3px solid #00bcd4;
+    }
+
+    .program {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .program div {
+      background: #e0f7fa;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #004d66;
+      border: 1px solid #00bcd4;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .program div:hover {
+      background: #00bcd4;
+      color: white;
+    }
+
+    .deskripsi-jurusan {
+      display: none;
+      text-align: left;
+      margin-top: 20px;
+      padding: 20px;
+      background: #f1faff;
+      border-radius: 12px;
+    }
+
+    .deskripsi-jurusan img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .penawaran, .footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .penawaran {
+      background: #0288d1;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 0.85em;
+      color: #555;
+    }
+
+    #kembaliBtn {
+      display: none;
+      margin-top: 20px;
+      background: #00acc1;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="poster">
+  <img src="logo.JPG" alt="logo sekolah" class="logo">
+  <div class="judul">
+    <h2>SMK Bina Informatika</h2>
+    <h3>"Membangun Generasi Unggul & Berkarakter"</h3>
+  </div>
+  <img src="foto.JPG" alt="Foto Sekolah" class="main-photo">
+
+  <div class="program">
+    <div onclick="tampilkanDeskripsi('rpl')">Rekayasa Perangkat Lunak</div>
+    <div onclick="tampilkanDeskripsi('mm')">Multimedia</div>
+    <div onclick="tampilkanDeskripsi('otkp')">OTKP</div>
+    <div onclick="tampilkanDeskripsi('tkj')">TKJ</div>
+    <div onclick="tampilkanDeskripsi('pkm')">PKM</div>
+  </div>
+
+  <!-- Deskripsi Jurusan -->
+  <div id="rpl" class="deskripsi-jurusan">
+    <h3>Rekayasa Perangkat Lunak (RPL)</h3>
+    <p>Fokus:
+	•	Pengembangan aplikasi berbasis web, mobile, dan desktop.
+
+Apa yang dipelajari:
+	•	Bahasa pemrograman (seperti HTML, CSS, JavaScript, Java, Python)
+	•	Pembuatan aplikasi dan sistem informasi
+	•	Basis data (MySQL, Firebase, dsb)
+	•	UI/UX (User Interface & User Experience Design)
+	•	Software engineering (perencanaan dan pengujian aplikasi)
+
+Peluang Kerja:
+	•	Web Developer
+	•	Mobile App Developer
+	•	Software Engineer
+	•	UI/UX Designer
+	•	Game Developer.</p>
+    <img src="rpl.JPG" alt="rpl.JPG">
+  </div>
+
+  <div id="mm" class="deskripsi-jurusan">
+    <h3>Multimedia</h3>
+    <p>Fokus pada desain grafis, animasi, dan video editing.</p>
+    <img src="mm.JPG" alt="mm.JPG">
+  </div>
+
+  <div id="otkp" class="deskripsi-jurusan">
+    <h3>OTKP</h3>
+    <p>Fokus:
+	•	Administrasi modern berbasis teknologi dan digitalisasi perkantoran.
+
+Apa yang dipelajari:
+	•	Korespondensi dan komunikasi bisnis
+	•	Pengelolaan dokumen & arsip digital
+	•	Aplikasi perkantoran (Microsoft Office, Google Workspace)
+	•	Manajemen waktu dan pelayanan pelanggan
+	•	Etika dan protokol kantor
+
+Peluang Kerja:
+	•	Sekretaris
+	•	Administrasi Perkantoran
+	•	Resepsionis
+	•	Staf HRD
+	•	Customer Service
+</p>
+    <img src="otkp.JPG" alt="otkp.JPG">
+  </div>
+
+  <div id="tkj" class="deskripsi-jurusan">
+    <h3>Teknik Komputer dan Jaringan (TKJ)</h3>
+    <p>Fokus:
+	•	Jaringan komputer, instalasi, pemeliharaan perangkat keras dan software.
+
+Apa yang dipelajari:
+	•	Instalasi dan konfigurasi jaringan LAN/WAN
+	•	Mikrotik, Cisco, server dan sistem operasi jaringan
+	•	Troubleshooting perangkat keras (hardware) dan software
+	•	Keamanan jaringan (cybersecurity dasar)
+	•	Cloud computing dan jaringan nirkabel (WiFi)
+
+Peluang Kerja:
+	•	Network Engineer
+	•	Teknisi Komputer
+	•	Administrator Jaringan
+	•	IT Support
+	•	Sistem Administrator</p>
+    <img src="tkj.JPG" alt="tkj.JPG">
+  </div>
+
+  <div id="pkm" class="deskripsi-jurusan">
+    <h3>PKM</h3>
+    <p>Fokus:
+	•	Layanan keuangan, transaksi perbankan, dan manajemen keuangan mikro.
+
+Apa yang dipelajari:
+	•	Akuntansi dasar dan laporan keuangan
+	•	Transaksi perbankan dan layanan nasabah
+	•	Keuangan mikro dan koperasi
+	•	Pengelolaan uang, tabungan, dan investasi kecil
+	•	Penggunaan software akuntansi (MYOB, Accurate)
+
+Peluang Kerja:
+	•	Teller Bank
+	•	Customer Service Bank
+	•	Staf Keuangan
+	•	Pegawai Koperasi
+	•	Wirausahawan Mikro.</p>
+    <img src="pkm.JPG" alt="pmk.JPG">
+  </div>
+
+  <!-- Info tambahan -->
+  <div class="penawaran">🎉 Free DSP Untuk 100 Orang Pertama!</div>
+  <div class="penawaran">💸 Biaya Pendaftaran Hanya 400.000 Saja!</div>
+  <button id="kembaliBtn" onclick="kembaliKeBeranda()">⬅ Kembali ke Beranda</button>
+  <div class="footer">
+    📍 Jl. RE Abdullah, Pasirjaya No.15 Kota Bogor<br>
+    📞 +62 896-1735-4862 | ✉️ info@smkbinainformatika.sch.id
+  </div>
+</div>
+
+<script>
+  function tampilkanDeskripsi(id) {
+    document.querySelectorAll('.deskripsi-jurusan').forEach(el => el.style.display = 'none');
+    document.querySelector('.logo').style.display = 'none';
+    document.querySelector('.judul').style.display = 'none';
+    document.querySelector('.main-photo').style.display = 'none';
+    document.querySelector('.program').style.display = 'none';
+    document.querySelectorAll('.penawaran').forEach(p => p.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    document.getElementById('kembaliBtn').style.display = 'inline-block';
+  }
+
+  function kembaliKeBeranda() {
+    document.querySelectorAll('.deskripsi-jurusan').forEach(el => el.style.display = 'none');
+    document.querySelector('.logo').style.display = 'block';
+    document.querySelector('.judul').style.display = 'block';
+    document.querySelector('.main-photo').style.display = 'block';
+    document.querySelector('.program').style.display = 'flex';
+    document.querySelectorAll('.penawaran').forEach(p => p.style.display = 'block');
+    document.getElementById('kembaliBtn').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
